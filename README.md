@@ -130,3 +130,36 @@ até então e finalmente criar o banco de dados.
         FROM PRODUTO
         WHERE PRO_COD= 10
 ```
+
+## Modelo Conceitual
+
+### Entidade : 
+- Conjunto de objetos da realidade modelada, sobre os quais deseja-se manter informações na base de dados.
+Exemplo : Funcionario , Departamento, etc
+
+### Relacionamento :
+- Conjunto de associações entre entidades.
+- Cardinalidade de Relacionamentos:
+	- Expressa número (mínimo, máximo) de ocorrências de entidade associadas a uma determinada orrência 
+	de entidade por meio do relacionamento.
+
+### Atributos:
+- Dado que é associado a cada ocorrência de uma entidade ou de um relacionamento.
+- Cardinalidade do Atributo
+	-Define quantos valores deste atributo podem estar associados a uma ocorrência da entidade/relacionamento 
+	a qual ele pertence.
+
+#### Entidade Fraca :
+(Pesquisar e colocar aqui)
+
+#### Entidade Associativa :
+- Entidade Associativa permite a associação de uma entidade a um relacionamento.
+
+#### Modelo com Aspecto Temporal :
+- Contém atributos cujos valores modificam ao longo do tempo.
+
+## Modelo Logico
+
+Continua ...
+
+
