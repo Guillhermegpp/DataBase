@@ -1,6 +1,6 @@
 # DataBase
 
-Resumo de Banco de Dados
+# Resumo de Banco de Dados
 
 Dados x Informação
 - Dado : Fato do mundo real que está registrado e possui um significado no contexto de um domínio de aplicação.
@@ -10,10 +10,10 @@ Dados x Informação
 Armazene Dados, não Informações
 
 
-Banco de Dados:
+## Banco de Dados:
 - Conjunto de dados relacionados. (Elmasri/Navathe)
 
-Sistema de Gerenciamento de Banco de Dados :
+## Sistema de Gerenciamento de Banco de Dados :
 - Sistema constituído por um conjunto de dados associados a um conjunto de programas para acesso a esses dados. 
 
 Administrador de Banco de Dados (DBA) :
@@ -25,14 +25,14 @@ Administrador de Banco de Dados (DBA) :
 	- Níveis de visão
 	- Especificação das restrições de integridade
 
-Sistema de Banco de Dados : 
+## Sistema de Banco de Dados : 
 - É um ambiente de hardware e de software composto por dados armazenados em um banco de dados(BD), pelo software 
 de gerência do banco de dados (SGBD) e os programas de aplicação. (Melo, R.)
 
 Banco de dados --> muda ao longo do tempo!
 	- Informações são incluídas e excluídas
 
-Instância :
+### Instância :
 - Dados, informações de um banco de dados
 - Conjunto de informações de um BD em um dado momento --> Instância de um Banco de Dados!
 ```shell
@@ -41,7 +41,7 @@ Cada registro representa uma instância de cliente:
 	CPF: 02383468712 NOME: Carlota Joaquina DATANASC: 12/01/1965 
 ```
 
-Esquema :
+### Esquema :
 - Definição dos tipos de dados que estão armazenadas ou estarão armazenados no BD --> Esquema de um Banco de Dados!
 ```shell
 Exemplo :
@@ -49,36 +49,36 @@ Exemplo :
 	NOME 	  VARCHAR(30) 	NOT NULL
 	DATA_NASC DATE
 ```
-Modelo de Dados (BD) 
+## Modelo de Dados (BD) 
 - É basicamente um conjunto de conceitos utilizados para descrever 
 um Banco de dados. “Descrição formal da estrutura de um Banco de Dados.”
 ```shell	
 Exemplo : O modelo de dados informa que o BD armazena dados sobre os produtos e que, para cada produto, 
 são armazenados seu código, preço e descrição.
 ```
-Tipos de Modelos de Banco de Dados: 
+### Tipos de Modelos de Banco de Dados: 
 
 
-- Conceitual : 
-    - Modelo de dados abstrato, que descreve a estrutura de um BD independente de um SGBD.
+#### Conceitual : 
+- Modelo de dados abstrato, que descreve a estrutura de um BD independente de um SGBD.
 	- Abordagem Entidade-Relacionamento (ER)
-	    Exemplo: Diagrama entidade – relacionamento (DER)
+	Exemplo: Diagrama entidade – relacionamento (DER)
 
-- Logico : 
-    - Modelo de dados que representa a estrutura de dados de um BD conforme vista pelo usuário do SGBD. 
-    Depende do tipo de SGDB que está sendo usado. Um modelo lógico de um BD relacional deve definir 
-    quais as  tabelas que o BD contém e, para cada tabela, quais os nomes das colunas.
+#### Logico : 
+- Modelo de dados que representa a estrutura de dados de um BD conforme vista pelo usuário do SGBD. 
+Depende do tipo de SGDB que está sendo usado. Um modelo lógico de um BD relacional deve definir 
+quais as  tabelas que o BD contém e, para cada tabela, quais os nomes das colunas.
 ```shell	
   Exemplo : 	TipoDeProduto (Tip_cod, Tip_Descrição)
 			Produto (Prod_Cod, Prod_Descrição, Prod_Preço, Tip_cod)
 			Tip_cod referencia tipodeproduto
 
 ```
-- Fisico : 
-    - Inclui a análise das características e recursos necessários para armazenamento e manipulação das 
-    estruturas de dados (estrutura de armazenamento, endereçamento, acesso e alocação física), sendo 
-    uma sequência de comandos executados em SQL a fim de criar as tabelas, estruturas e ligações projetadas 
-    até então e finalmente criar o banco de dados.
+#### Fisico : 
+- Inclui a análise das características e recursos necessários para armazenamento e manipulação das
+estruturas de dados (estrutura de armazenamento, endereçamento, acesso e alocação física), sendo 
+uma sequência de comandos executados em SQL a fim de criar as tabelas, estruturas e ligações projetadas 
+até então e finalmente criar o banco de dados.
 ```shell
   Exemplo: 
     CREATE TABLE Produtos (
@@ -90,7 +90,7 @@ Tipos de Modelos de Banco de Dados:
        QUANT_PROD Texto(1),
 )
 ```
-Fases:
+### Fases:
   1) Modelagem Conceitual : Criação do Modelo Conceitual (DER);
   2) Projeto lógico : Transformação do modelo conceitual para o lógico;
   3) Projeto físico : Cria-se o esquema do Banco de Dados, por meio da DDL –
@@ -98,7 +98,7 @@ Fases:
   DML- Linguagem de Manipulação dos Dados.
   
   
-Linguagem de Definição de Dados (DDL) :
+## Linguagem de Definição de Dados (DDL) :
 - Permite especificar o esquema do banco de dados, através de um conjunto 
     de definição de dados
 - O resultado da compilação de instruções DDL é a definição de um conjunto 
@@ -114,7 +114,7 @@ Linguagem de Definição de Dados (DDL) :
       )
 ```
      
-Linguagem de Manipulação de Dados (DML) :
+## Linguagem de Manipulação de Dados (DML) :
 - Permite ao usuário acessar ou manipular os dados.
 - Uma consulta (query) é um comando que requisita alguma informação.
 - Possibilita inserção e remoção de dados. 
