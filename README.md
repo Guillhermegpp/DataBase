@@ -61,8 +61,12 @@ são armazenados seu código, preço e descrição.
 
 #### Conceitual : 
 - Modelo de dados abstrato, que descreve a estrutura de um BD independente de um SGBD.
-	- Abordagem Entidade-Relacionamento (ER)
-	Exemplo: Diagrama entidade – relacionamento (DER)
+	- Abordagem Entidade-Relacionamento (ER).
+	Exemplo: 
+![alt text](http://spaceprogrammer.com/wp-content/uploads/2017/10/diagrama-er-exemplo-fraca-003-1.jpg?raw=true "Diagrama entidade – relacionamento (DER)")
+	
+
+	
 
 #### Logico : 
 - Modelo de dados que representa a estrutura de dados de um BD conforme vista pelo usuário do SGBD. 
