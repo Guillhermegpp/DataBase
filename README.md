@@ -176,16 +176,16 @@ Continua ...
 - Para cada modelo conceitual (MER) podem existir vários modelos Relacionais
 
 ### São sete os passos para o mapeamento do Modelo Entidade Relacionamento para o Modelo Relaciona
-1.Mapear Conjuntos de Entidades “Fortes” (Regulares);
-2.Mapear Conjuntos de Entidades Fracas; (Relacionamento Identificador);
-3.Mapear Conjuntos de Relacionamento Binário 1:1;
-4.Mapear Conjuntos de Relacionamento Binário 1:N;
-5.Mapear Conjuntos de Relacionamento Binário M:N;
-6.Mapear Conjuntos de Relacionamentos n>2;
-7.Mapear Atributos Multivalorados;
+- 1.Mapear Conjuntos de Entidades “Fortes” (Regulares)
+- 2.Mapear Conjuntos de Entidades Fracas; (Relacionamento Identificador)
+- 3.Mapear Conjuntos de Relacionamento Binário 1:1
+- 4.Mapear Conjuntos de Relacionamento Binário 1:N
+- 5.Mapear Conjuntos de Relacionamento Binário M:N
+- 6.Mapear Conjuntos de Relacionamentos n>2
+- 7.Mapear Atributos Multivalorados
 
 #### Exemplo: 
-
+...
 
 
 
