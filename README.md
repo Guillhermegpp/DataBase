@@ -13,7 +13,8 @@ Armazene Dados, não Informações
 ## Banco de Dados:
 - Conjunto de dados relacionados. (Elmasri/Navathe)
 
-## Sistema de Gerenciamento de Banco de Dados :
+## Sistema de Gerenciamento de Banco de Dados (SGBD) :
+- Software que incorpora as funções de definição, recuperação e alteração de dados em um BD.
 - Sistema constituído por um conjunto de dados associados a um conjunto de programas para acesso a esses dados. 
 
 Administrador de Banco de Dados (DBA) :
@@ -24,6 +25,14 @@ Administrador de Banco de Dados (DBA) :
 	- Controle de acesso aos dados (restrições de acesso)
 	- Níveis de visão
 	- Especificação das restrições de integridade
+	
+## Tipo de Redundância de Dados
+##### 1) Redundância Controlada de Dados
+- O software é desenvolvido para manter a sincronia entre os dados. Exemplo:
+Sistemas Distribuídos.
+##### 2) Redundância Não Controlada de Dados
+- A responsabilidade por manter a sincronia dos dados e do usuário e não do
+software.
 
 ## Sistema de Banco de Dados : 
 - É um ambiente de hardware e de software composto por dados armazenados em um banco de dados(BD), pelo software 
@@ -161,5 +170,28 @@ Exemplo : Funcionario , Departamento, etc
 ## Modelo Logico
 
 Continua ...
+
+
+## Mapeamento Modelo ER para Modelo Relacional
+- Para cada modelo conceitual (MER) podem existir vários modelos Relacionais
+
+### São sete os passos para o mapeamento do Modelo Entidade Relacionamento para o Modelo Relaciona
+1.Mapear Conjuntos de Entidades “Fortes” (Regulares);
+2.Mapear Conjuntos de Entidades Fracas; (Relacionamento Identificador);
+3.Mapear Conjuntos de Relacionamento Binário 1:1;
+4.Mapear Conjuntos de Relacionamento Binário 1:N;
+5.Mapear Conjuntos de Relacionamento Binário M:N;
+6.Mapear Conjuntos de Relacionamentos n>2;
+7.Mapear Atributos Multivalorados;
+
+#### Exemplo: 
+
+
+
+
+
+
+
+
 
 
