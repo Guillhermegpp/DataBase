@@ -175,6 +175,11 @@ Continua ...
 ## Mapeamento Modelo ER para Modelo Relacional
 - Para cada modelo conceitual (MER) podem existir vários modelos Relacionais
 
+### Regras de Integridade do Modelo Relacional:
+- Integridade de Identidade (ou entidade): A Chave primária não pode conter um valor nulo (NULL) e identifica exclusivamente cada linha de dados em uma tabela.
+- Integridade Referencial: Não pode existir na chave estrangeira, um valor que não exista na tabela na qual ela é chave primária.
+- Integridade de domínio :O valor de um campo deve obedecer a uma definição de valores admitidos para coluna, como tamanho em caracteres, tipo de valores (número, data,...), valores permitidos.
+
 ### São sete os passos para o mapeamento do Modelo Entidade Relacionamento para o Modelo Relaciona
 - 1.Mapear Conjuntos de Entidades “Fortes” (Regulares)
 - 2.Mapear Conjuntos de Entidades Fracas; (Relacionamento Identificador)
