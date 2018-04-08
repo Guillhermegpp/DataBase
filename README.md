@@ -212,6 +212,12 @@ uma chave primária composta.
 c) Dependência Funcional Transitiva - Ocorre quando um atributo além de depender da chave 
 primária da tabela, depende de outra coluna ou conjunto de colunas da tabela.
 
+#### Passos para Normalização:
+- Criar a entidade Não Normalizada;
+- Eliminar grupos repetitivos/não conter tabelas aninhadas (1FN);
+- Eliminar dependência Funcional Parcial (2FN);
+- Eliminar dependência funcional transitiva (3FN).
+
 #### Exemplo
 
 - Entidade não Normalizada
@@ -249,11 +255,7 @@ CARGO (Cod_Cargo, cargo,sal)
 	- forma normal de Boyce/Codd.
 	- a 4FN.
 	- a 5FN.
-#### Passos para Normalização:
-- Criar a entidade Não Normalizada;
-- Eliminar grupos repetitivos/não conter tabelas aninhadas (1FN);
-- Eliminar dependência Funcional Parcial (2FN);
-- Eliminar dependência funcional transitiva (3FN).
+
 
 
 
