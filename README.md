@@ -189,9 +189,71 @@ Continua ...
 - 6.Mapear Conjuntos de Relacionamentos n>2
 - 7.Mapear Atributos Multivalorados
 
-#### Exemplo: 
-...
+## Normalização
 
+Baseia-se no conceito de forma normal -> é uma regra que deve ser obedecida por uma tabela.
+
+Formas Normais: 1FN, 2FN, 3FN e 4FN.
+
+#### Elimina:
+1) Redundância;
+2) Atributo Multivalorado;
+3) Grupo Repetitivo;
+4) Dependência Funcional Parcial;
+5) Dependência Transitiva
+
+#### Conceitos:
+a) Grupo Repetitivo - Conjunto de atributos de uma entidade que ocorre várias vezes para 
+cada ocorrência da Entidade.
+
+b) Dependência Funcional Parcial - Ocorre quando um atributo depende apenas de parte de 
+uma chave primária composta.
+
+c) Dependência Funcional Transitiva - Ocorre quando um atributo além de depender da chave 
+primária da tabela, depende de outra coluna ou conjunto de colunas da tabela.
+
+#### Exemplo
+
+- Entidade não Normalizada
+```shell
+PROJETO(CodProj, descr, (codEmp, nome,cargo, salário, dataIni, TempAl))
+```
+
+- Primeira Forma Normal (1FN)
+Eliminar Grupos Repetitivos/Não conter tabelas aninhadas.
+```shell
+PROJETO (CodProj, descr)
+PROJETOEMP (CodProj, CodEmp,nome, cargo, salário, dataIni, TempAl)
+```
+
+- Segunda Forma Normal (2FN)
+Tabela: — Estar na 1FN.
+	— Não conter dependência Funcional Parcial
+```shell	
+PROJETO (CodProj, descr)
+PROJETOEMP (CodProj, CodEmp, dataIni, TempAl)
+EMPREGADO (CodEmp, nome, cargo, sal)
+```
+- Terceira Forma Normal (3FN)
+Tabela: — Estar na 2FN. 
+	— Não conter dependência funcional transitiva.
+```shell
+PROJETO (CodProj,descr)
+PROJETOEMP (CodProj, CodEmp, dataIni, TempAl)
+EMPREGADO (CodEmp, nome, cod_cargo)
+CARGO (Cod_Cargo, cargo,sal)
+```
+- Para a maioria dos documentos à e arquivos:
+	- a decomposição até a 3FN é suficiente.	
+- Na literatura, aparecem outras formas normais:
+	- forma normal de Boyce/Codd.
+	- a 4FN.
+	- a 5FN.
+#### Passos para Normalização:
+- Criar a entidade Não Normalizada;
+- Eliminar grupos repetitivos/não conter tabelas aninhadas (1FN);
+- Eliminar dependência Funcional Parcial (2FN);
+- Eliminar dependência funcional transitiva (3FN).
 
 
 
