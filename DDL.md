@@ -18,7 +18,7 @@ Obrigatoriedade de valor no campo
   - Define que cada valor da coluna, ou conjunto de colunas, seja
 sempre único dentro da tabela.
   - Exemplo:
-  ```sh
+  ```sql
   Nivel de Tabela: 
   CREATE TABLE ALUNO
   (
@@ -30,7 +30,7 @@ sempre único dentro da tabela.
   );
   ```
   OU
-  ```sh
+  ```sql
   Nivel de Coluna: 
   CREATE TABLE ALUNO
   (
@@ -45,7 +45,7 @@ sempre único dentro da tabela.
   - Define uma ou mais colunas como chave primária da coluna.
   - Nenhuma coluna com definição de uma constraint PRIMARY KEY aceitará valores nulos.
   - Exemplo 
-  ```sh
+  ```sql
   CREATE TABLE ALUNO
   (
   COD_ALUNO number(4),
@@ -56,7 +56,7 @@ sempre único dentro da tabela.
   );
   ```
   OU
-  ```sh
+  ```sql
   CREATE TABLE ALUNO
   (
   COD_ALUNO number(4) Primary Key,
@@ -71,7 +71,7 @@ sempre único dentro da tabela.
   - Define uma restrição de integridade referencial,designando uma ou mais colunas como chave
 estrangeira.
  - Exemplo:
- ```sh
+ ```sql
   CREATE TABLE ALUNO
   (
   COD_ALUNO number(4),
@@ -90,7 +90,7 @@ estrangeira.
   - Exemplos:
     - Restrição de valor mínimo para salário, ou seja, só aceitar valores maiores que 500,00.
     - Restrição de campo SEXO, permitindo apenas valores dentro do domínio (“F”, “M”)
-  ```sh
+  ```sql
   CREATE TABLE ALUNO
   (
   COD_ALUNO number(4) PRIMARY KEY,
@@ -103,7 +103,7 @@ estrangeira.
   ```
   
 #### Como verificar as constraints
-```sh
+```sql
 Select CONSTRAINT_NAME, CONSTRAINT_TYPE,
 STATUS, SEARCH_CONDITION
 From USER_CONSTRAINTS
@@ -133,11 +133,11 @@ O comando DROP é utilizado para excluir objetos do esquema do banco de dados.
 - Não são permitidas exclusões de colunas com alguma constraint associada! É preciso excluir a restrição
 antes.
 - Excluir coluna: 
-```sh
+```sql
 ALTER TABLE NOME_DA_TABELA
 DROP COLUMN NOME_COLUNA
 ```
 - Excluir tabela:
-```sh
+```sql
 DROP TABLE NOME_DA_TABELA
 ```
