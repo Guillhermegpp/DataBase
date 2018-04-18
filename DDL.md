@@ -65,7 +65,7 @@ sempre único dentro da tabela.
   CPF number(11)
   );
   ```
-  - OB```S: A definição de uma chave primária composta só pode ser realizada a nível de tabela!
+  - OBS: A definição de uma chave primária composta só pode ser realizada a nível de tabela!
 - FOREIGN KEY:
   - Definição de chave estrangeira
   - Define uma restrição de integridade referencial,designando uma ou mais colunas como chave
