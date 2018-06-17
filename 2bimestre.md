@@ -144,10 +144,11 @@ AS SELECT MED_CODIGO,MED_NOME
 FROM MEDICO
 ```
 
-### Sequence
+## Sequence
 - É um objeto de banco de dados criado pelo usuário que pode ser compartilhado por vários usuários para gerar números inteiros exclusivos.
 - São usadas para criar um valor de chave primária, que deve ser exclusivo para cada linha. A sequência é gerada e incrementada (ou diminuída) por uma rotina Oracle interna.
-´´´SQL
+
+```SQL
 --- Sintaxe:
 CREATE SEQUENCE sequência 
        [INCREMENT BY n]
@@ -157,15 +158,16 @@ CREATE SEQUENCE sequência
        [{CYCLE | NOCYCLE}];
 ```
 
-- INCREMENT BY n	- Intervalo entre números de sequência.
-- START WITH n	  - Primeiro número de sequência a ser gerado.
-- MAXVALUE n	    - Valor máximo que a sequência pode gerar.
-- NOMAXVALUE	    - Valor máximo de 10^27 para uma sequência crescente e 1 para uma sequência decrescente(Default).
-- MINVALUE n	    - Valor mínimo que a sequência pode gerar.
-- NOMINVALUE	    - Valor mínimo de 1 para uma sequência crescente e (10^26) para uma seqüência decrescente(Default).
-- CYCLE | NOCYCLE - Define se a seqüência continuará ou nao a gerar valores após alcançar seu valor máximo ou mínimo. (NOCYCLE é a opção default.)
+  - INCREMENT BY n	- Intervalo entre números de sequência.
+  - START WITH n	  - Primeiro número de sequência a ser gerado.
+  - MAXVALUE n	    - Valor máximo que a sequência pode gerar.
+  - NOMAXVALUE	    - Valor máximo de 10^27 para uma sequência crescente e 1 para uma sequência decrescente(Default).
+  - MINVALUE n	    - Valor mínimo que a sequência pode gerar.
+  - NOMINVALUE	    - Valor mínimo de 1 para uma sequência crescente e (10^26) para uma seqüência decrescente(Default).
+  - CYCLE | NOCYCLE - Define se a seqüência continuará ou nao a gerar valores após alcançar seu valor máximo ou mínimo. (NOCYCLE é a opção default.)
 
 - Exemplo:
+
 ```SQL
 CREATE SEQUENCE DEP_ID_SEQ
 INCREMENT BY 10
@@ -173,5 +175,5 @@ START WITH 120
 MAXVALUE 1000
 ```
 
-### TRIGGERS
-...
+## TRIGGERS
+
