@@ -64,9 +64,9 @@ GRANT DBA TO USUARIO1 WITH ADMIN OPTION;
   - Auto Junções
   
   
-  ###Funções de Grupo
-  - AVG
-  - COUNT 
-  - MAX
-  - MIN
-  - SUM
+### Funções de Grupo
+- AVG
+- COUNT 
+- MAX
+- MIN
+- SUM
