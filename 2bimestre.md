@@ -176,4 +176,65 @@ MAXVALUE 1000
 ```
 
 ## TRIGGERS
+- São Unidades de Programa que são executadas, automaticamente, antes ou depois da ocorrência de um evento.
+
+#### Exemplos de Utilização:
+- Atualização do estoque.
+- Implantação de regras de negócios (Ex. Envio de e-mail ao
+fornecedor para compra de produtos quando atingir a quant.
+Mínima em estoque)
+- Criação de valores. (Ex. Ao cadastrar um novo funcionário
+realiza a soma do salários dos funcionários e atualiza na
+tabela departamento).
+
+- Sintaxe
+```SQL
+CREATE [OR REPLACE] TRIGGER [esquema.] nome_trigger
+[BEFORE ou AFTER]
+[INSERT OR DELETE OR UPDATE]
+[OF coluna]
+ON [esquema.]tabela_nome
+[FOR EACH ROW]
+WHEN (condição)
+DECLARE
+variáveis
+BEGIN
+corpo_trigger
+END;
+```
+#### Ativação de Triggers
+Ativando Gatilhos UMA ou VÁRIAS vezes
+- A opção FOR EACH ROW:
+- Determina se o gatilho é do tipo row trigger ou
+statement trigger.
+- Se especificada, o gatilho é executado UMA vez para
+CADA tupla afetada pelo evento.
+- Se omitida, o gatilho é executado UMA ÚNICA vez
+para cada ocorrência de evento
+- Exemplo com FOR EACH ROW
+```SQL
+CREATE OR REPLACE 
+TRIGGER AUMENTA_SALARIO
+AFTER UPDATE ON EMP_TAB
+FOR EACH ROW WHEN (NEW.SAL > 1000)
+BEGIN
+  INSERT INTO EMP_LOG (EMP_ID, DATA_EMP,NOVO_SAL,MSG)
+VALUES (:NEW.EMPID,SYSDATE,:NEW.SAL,'NOVO SALARIO SUPERAVALIADO')
+END;
+---
+UPDATE EMP_TAB SET SAL=SAL+1000.0
+  WHERE DEPTNO=20;
+```
+- Exemplo de gatilho de uma vez
+```SQL
+CREATE OR REPLACE TRIGGER AUMENTO_SALARIAL
+AFTER UPDATE ON EMP_TAB
+BEGIN
+  INSERT INTO EMP_LOG(DATA,MSG)
+  VALUES(SYSDATE,'MUDANÇA EM EMP_TAB');
+END;
+---
+UPDATE EMP_TAB SET SAL=SAL+1000.0
+WHERE DEPTON=20;
+```
 
